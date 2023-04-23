@@ -1,0 +1,407 @@
+﻿<Page x:Name="page" x:Class="NETFLIX.InicioSesion"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NETFLIX"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="InicioSesion" Width="1280" Height="720">
+    <Page.Resources>
+        <Style x:Key="ButtonStyle9" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver">
+                                        <Storyboard>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="0.75"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Rectangle x:Name="rectangle" Fill="Black" RadiusY="30.7" RadiusX="30.7">
+                                <Rectangle.Stroke>
+                                    <SolidColorBrush Color="Black" Opacity="0"/>
+                                </Rectangle.Stroke>
+                            </Rectangle>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle10" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver">
+                                        <Storyboard>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="contentPresenter">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="0.5"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <ContentPresenter x:Name="contentPresenter" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="FontFamily" Value="SimSun"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        <Style x:Key="ButtonStyle11" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver">
+                                        <Storyboard>
+                                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+                                                <EasingColorKeyFrame KeyTime="0" Value="Red"/>
+                                            </ColorAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="0.75"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Rectangle x:Name="rectangle" Fill="Red" RadiusY="30.7" RadiusX="30.7">
+                                <Rectangle.Stroke>
+                                    <SolidColorBrush Color="Black" Opacity="0"/>
+                                </Rectangle.Stroke>
+                            </Rectangle>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle12" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver">
+                                        <Storyboard>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="contentPresenter">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="0.5"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <ContentPresenter x:Name="contentPresenter" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="FontFamily" Value="SimSun"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="#FF838383"/>
+        </Style>
+        <Style x:Key="ButtonStyle13" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver">
+                                        <Storyboard>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="image">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="1.086"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="image">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="1.011"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="-0.6"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="1.2"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="0.75"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Image x:Name="image" Source="pngegg (4).png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+                                <Image.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Image.RenderTransform>
+                            </Image>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Storyboard x:Key="log">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Login">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="{x:Static Visibility.Collapsed}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Registro">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="mas">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.552"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="3.552"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="5.06"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="mas">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="-24"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-48"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-184.8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-265.6"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="mas">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.078"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="3.923"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="5.578"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="mas">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-54"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="78"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="154.8"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="button1">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Rectangle x:Name="rectangle4" Fill="Red" RadiusY="21.9" RadiusX="21.9" RenderTransformOrigin="0.5,0.5">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                                <Rectangle.Stroke>
+                                    <SolidColorBrush Color="Black" Opacity="0"/>
+                                </Rectangle.Stroke>
+                            </Rectangle>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle2" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <ContentPresenter RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" Height="72" VerticalAlignment="Bottom" Margin="16,0,-16,0"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="48"/>
+            <Setter Property="Foreground" Value="Black"/>
+        </Style>
+        <Storyboard x:Key="Inicio">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="rectangle">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="rectangle1">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="mas">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="button1">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Registro">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Login">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="netflix1">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="page">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+    </Page.Resources>
+    <Page.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded"/>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="button">
+            <BeginStoryboard x:Name="Inicio_BeginStoryboard" Storyboard="{StaticResource Inicio}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="netflix1">
+            <BeginStoryboard x:Name="Inicio_BeginStoryboard1" Storyboard="{StaticResource Inicio}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="mas">
+            <BeginStoryboard x:Name="log_BeginStoryboard" Storyboard="{StaticResource log}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="button1">
+            <BeginStoryboard x:Name="log_BeginStoryboard1" Storyboard="{StaticResource log}"/>
+        </EventTrigger>
+    </Page.Triggers>
+    <Grid x:Name="GridInicio" Background="Black" Margin="0,0,0,6">
+        <Rectangle x:Name="rectangle" Fill="#FF838383" HorizontalAlignment="Left" Height="516.8" Margin="392.4,101.2,0,0" VerticalAlignment="Top" Width="496" RadiusY="21.9" RadiusX="21.9">
+            <Rectangle.Stroke>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Rectangle.Stroke>
+        </Rectangle>
+        <Rectangle x:Name="rectangle1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="516.8" Margin="371.6,121.2,0,0" VerticalAlignment="Top" Width="537.6" RadiusY="21.9" RadiusX="21.9">
+            <Rectangle.Stroke>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Rectangle.Stroke>
+        </Rectangle>
+        <Button x:Name="mas" Content="Button" HorizontalAlignment="Left" Height="92.8" Margin="853.2,179.6,0,0" Style="{DynamicResource ButtonStyle1}" VerticalAlignment="Top" Width="107.2" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="button1" Content="+" Grid.Column="1" HorizontalAlignment="Left" Height="72" Margin="874,190.8,0,0" Grid.Row="1" Style="{DynamicResource ButtonStyle2}" VerticalAlignment="Top" Width="67.2"/>
+        <Grid x:Name="Registro" Margin="-556.6,192.868,1311.8,114.132" Visibility="Collapsed">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="68*"/>
+                <ColumnDefinition Width="7*"/>
+            </Grid.ColumnDefinitions>
+            <Rectangle Fill="Black" HorizontalAlignment="Left" Height="72" VerticalAlignment="Top" Width="19.2" Margin="451.681,0,-421.9,0" Grid.Column="1">
+                <Rectangle.Stroke>
+                    <SolidColorBrush Color="Black" Opacity="0"/>
+                </Rectangle.Stroke>
+            </Rectangle>
+            <TextBlock HorizontalAlignment="Left" Height="63.2" Margin="520.481,3.6,-705.1,0" TextWrapping="Wrap" Text="REGISTER" VerticalAlignment="Top" Width="233.6" FontWeight="Bold" FontSize="48" Foreground="Black" Grid.Column="1"/>
+            <Path Data="M383.6,323.6 L897.2,323.6" Fill="Black" HorizontalAlignment="Left" Height="5.8" Margin="461.881,145.1,-927.5,0" Stretch="Fill" VerticalAlignment="Top" Width="514.6" StrokeThickness="2" Stroke="Black" Grid.Column="1"/>
+            <Path Data="M383.6,323.6 L897.2,323.6" Fill="Black" HorizontalAlignment="Left" Height="5.8" Margin="461.881,208.1,-927.5,0" Stretch="Fill" VerticalAlignment="Top" Width="514.6" StrokeThickness="2" Stroke="Black" Grid.Column="1"/>
+            <Button x:Name="button" Content="Button" Grid.Column="1" HorizontalAlignment="Left" Height="62.4" Margin="538.981,302,-853.6,0" Style="{DynamicResource ButtonStyle9}" VerticalAlignment="Top" Width="363.6"/>
+            <TextBlock HorizontalAlignment="Left" Height="34.8" Margin="685.981,316.7,-694.6,0" TextWrapping="Wrap" Text="NEXT" VerticalAlignment="Top" Width="57.6" FontWeight="Bold" FontSize="22" Foreground="Red" Grid.Column="1"/>
+            <Button Content="Has olvidado la contraseña?" Grid.Column="1" HorizontalAlignment="Left" Height="25.2" Margin="627.781,381.8,-768.4,0" Style="{DynamicResource ButtonStyle10}" VerticalAlignment="Top" Width="189.6"/>
+            <TextBlock HorizontalAlignment="Left" Height="34.8" Margin="469.381,106.4,-506.8,0" TextWrapping="Wrap" Text="Usuario" VerticalAlignment="Top" Width="86.4" FontFamily="SimSun" FontSize="24" Foreground="White" Grid.Column="1"/>
+            <TextBlock HorizontalAlignment="Left" Height="34.8" Margin="468.481,170.6,-544.3,0" TextWrapping="Wrap" Text="Contraseña" VerticalAlignment="Top" Width="124.8" FontFamily="SimSun" FontSize="24" Foreground="White" Grid.Column="1"/>
+            <TextBox HorizontalAlignment="Left" Height="37.2" Margin="608.581,105.2,-906.4,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="346.8" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="22" VerticalContentAlignment="Center" Grid.Column="1"/>
+            <PasswordBox HorizontalAlignment="Left" Height="37.2" Margin="610.981,166.7,-923.2,0" VerticalAlignment="Top" Width="361.2" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="22" VerticalContentAlignment="Center" Grid.Column="1"/>
+            <Path Data="M383.6,323.6 L897.2,323.6" Fill="Black" HorizontalAlignment="Left" Height="5.8" Margin="461.881,271.1,-927.5,0" Stretch="Fill" VerticalAlignment="Top" Width="514.6" StrokeThickness="2" Stroke="Black" Grid.Column="1"/>
+            <TextBlock HorizontalAlignment="Left" Height="34.8" Margin="468.481,233.6,-628.3,0" TextWrapping="Wrap" Text="Repite contraseña" VerticalAlignment="Top" Width="208.8" FontFamily="SimSun" FontSize="24" Foreground="White" Grid.Column="1"/>
+            <PasswordBox HorizontalAlignment="Left" Height="37.2" Margin="685.381,229.7,-923.2,0" VerticalAlignment="Top" Width="286.8" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="22" VerticalContentAlignment="Center" Grid.Column="1"/>
+
+        </Grid>
+        <Grid x:Name="Login" Margin="371.4,192.4,383.8,114.6">
+            <Rectangle Fill="Red" HorizontalAlignment="Left" Height="72" VerticalAlignment="Top" Width="19.2">
+                <Rectangle.Stroke>
+                    <SolidColorBrush Color="Black" Opacity="0"/>
+                </Rectangle.Stroke>
+            </Rectangle>
+            <TextBlock HorizontalAlignment="Left" Height="63.2" Margin="68.8,3.6,0,0" TextWrapping="Wrap" Text="LOGIN" VerticalAlignment="Top" Width="233.6" FontWeight="Bold" FontSize="48" Foreground="Red"/>
+            <Path Data="M383.6,323.6 L897.2,323.6" Fill="Red" HorizontalAlignment="Left" Height="5.8" Margin="10.2,160.1,0,0" Stretch="Fill" VerticalAlignment="Top" Width="514.6" StrokeThickness="2" Stroke="Red"/>
+            <Path Data="M383.6,323.6 L897.2,323.6" Fill="Red" HorizontalAlignment="Left" Height="5.8" Margin="10.2,245.6,0,0" Stretch="Fill" VerticalAlignment="Top" Width="514.6" StrokeThickness="2" Stroke="Red"/>
+            <Button Content="Button" HorizontalAlignment="Left" Height="62.4" Margin="87.3,302,0,0" Style="{DynamicResource ButtonStyle11}" VerticalAlignment="Top" Width="363.6" Click="ir"/>
+            <TextBlock HorizontalAlignment="Left" Height="34.8" Margin="256.8,316.7,0,0" TextWrapping="Wrap" Text="IR" VerticalAlignment="Top" Width="69.6" FontWeight="Bold" FontSize="22"/>
+            <Button Content="Has olvidado la contraseña?" HorizontalAlignment="Left" Height="25.2" Margin="176.1,381.8,0,0" Style="{DynamicResource ButtonStyle12}" VerticalAlignment="Top" Width="189.6"/>
+            <TextBlock HorizontalAlignment="Left" Height="34.8" Margin="17.7,121.4,0,0" TextWrapping="Wrap" Text="Usuario" VerticalAlignment="Top" Width="86.4" FontFamily="SimSun" FontSize="24" Foreground="#FF484848"/>
+            <TextBlock HorizontalAlignment="Left" Height="34.8" Margin="16.8,208.1,0,0" TextWrapping="Wrap" Text="Contraseña" VerticalAlignment="Top" Width="124.8" FontFamily="SimSun" FontSize="24" Foreground="#FF484848"/>
+            <TextBox x:Name="usuario" HorizontalAlignment="Left" Height="37.2" Margin="156.9,120.2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="346.8" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="22" VerticalContentAlignment="Center"/>
+            <PasswordBox x:Name="contraseña1" HorizontalAlignment="Left" Height="37.2" Margin="159.3,204.2,0,0" VerticalAlignment="Top" Width="361.2" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" FontSize="22" VerticalContentAlignment="Center"/>
+
+        </Grid>
+        <Button x:Name="netflix1" Content="Button" Margin="489.6,-67.5,495.6,559.9" Style="{DynamicResource ButtonStyle13}"/>
+
+    </Grid>
+</Page>

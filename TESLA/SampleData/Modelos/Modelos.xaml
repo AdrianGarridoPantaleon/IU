@@ -1,0 +1,19 @@
+﻿<!--
+      *********    NO MODIFIQUE ESTE ARCHIVO     *********
+      Este archivo se regenera mediante una herramienta de diseño.
+       Si realiza cambios en este archivo, puede causar errores.
+-->
+<Modelos:Modelos xmlns:Modelos="clr-namespace:Expression.Blend.SampleData.Modelos">
+	<Modelos:Modelos.Collection>
+		<Modelos:Item Models="Cras class aenean" photo="Modelos_Files\image01.png"/>
+		<Modelos:Item Models="Nam curae donec mauris" photo="Modelos_Files\image02.png"/>
+		<Modelos:Item Models="Aliquam duis" photo="Modelos_Files\image03.png"/>
+		<Modelos:Item Models="Etiam maecenas" photo="Modelos_Files\image04.png"/>
+		<Modelos:Item Models="Nullam praesent" photo="Modelos_Files\image05.png"/>
+		<Modelos:Item Models="Fusce aptent" photo="Modelos_Files\image01.png"/>
+		<Modelos:Item Models="Accumsan sed" photo="Modelos_Files\image02.png"/>
+		<Modelos:Item Models="Auctor congue" photo="Modelos_Files\image03.png"/>
+		<Modelos:Item Models="Dis bibendum dictumst" photo="Modelos_Files\image04.png"/>
+		<Modelos:Item Models="Integer eleifend est" photo="Modelos_Files\image05.png"/>
+	</Modelos:Modelos.Collection>
+</Modelos:Modelos>

@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D6F852D9-3E43-4DE8-BC47-6BE89B16BAA4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TESLA</RootNamespace>
+    <AssemblyName>TESLA</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Bienvenido.xaml.cs">
+      <DependentUpon>Bienvenido.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LOG.xaml.cs">
+      <DependentUpon>LOG.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SampleData\Modelos\Modelos.xaml.cs">
+      <DependentUpon>Modelos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Bienvenido.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LOG.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="SampleData\Modelos\Modelos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Design\projectGuides.guides" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SampleData\Modelos\Modelos.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pngegg[3032].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="tesla4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="tesla3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="photo-1591134106085-8bbdc61a2ab5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="photo-1518194951576-93eec1215e9a.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="photo-1553260202-d1f2ce03298b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="photo-1453491945771-a1e904948959.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="conducir-tesla-renting-540x360.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png-clipart-tesla-tesla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="580b585b2edbce24c47b2cc9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png-transparent-tesla-logo-tesla-motors-car-tesla-model-s-tesla-model-3-decal-angle-text-rectangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="tesla-logo-png-tesla-motors-11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="descarga.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PngItem_1136544.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Omicrono_468214552_145729979_1024x576.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="kisspng-computer-icons-hamburger-button-menu-new-menu-5b34724c3cb0f7.1188475115301637882486.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SampleData\Modelos\Modelos_Files\image01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SampleData\Modelos\Modelos_Files\image02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SampleData\Modelos\Modelos_Files\image03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SampleData\Modelos\Modelos_Files\image04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SampleData\Modelos\Modelos_Files\image05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pngegg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="588a6758d06f6719692a2d22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="kisspng-computer-icons-login-person-user-avatar-log-5b14db41cdf9b8.4558004515280935058437.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="3D-tesla-s-p100d-2017-model_0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="kisspng-christian-cross-symbol-saltire-clip-art-5b2bab89ae6873.4269630515295886177144.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="kisspng-computer-icons-ellipsis-5b145c70d3bc35.5134897115280610408673.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="three-dots_icon-icons.com_53865.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pngegg %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="models%402.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="86852e81-26bb-47fc-ae9f-4e64baa57dae.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="991019_Model-S-3-798x460.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pngwing.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pngegg %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="maletero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Tesla-Model-3-Performance-front.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Tesla-Model-X-blanco.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="tesla-model-y-2019-azul-frontal-exterior_1920x1600c.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="instalacion-tesla-powerall.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="klipartz.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="kisspng-computer-icons-24-7-service-data-center-24-7-5b478ac7dc5315.5116347215314152399025.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Tesla-Model-S-and-Model-X-SUV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="kisspng-user-computer-icons-symbol-5aff29c2b16c40.4032216315266718107267.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pngegg %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="kisspng-arroba-at-sign-information-mention-5b2442b1538169.8391571315291030253421.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="kisspng-tesla-motors-electric-vehicle-car-2015-tesla-model-rf-online-logo-5b480b8c179779.2360523315314482040966.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pngkit_encryption-png_3754330.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="battery-status55_41595.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="charging19_41600.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
